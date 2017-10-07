@@ -1,0 +1,8 @@
+observer_pattern:
+    resource: "@ObserverPatternBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
