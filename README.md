@@ -1,4 +1,4 @@
 Patterns
 ========
 
-A Symfony project created on October 7, 2017, 5:52 pm.
+This is entirely based on Head First Design Patterns. I am porting this from Java to Symfony 3.
