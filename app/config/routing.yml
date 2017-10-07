@@ -1,3 +1,8 @@
+duck:
+    resource: "@DuckBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 observer_pattern:
     resource: "@ObserverPatternBundle/Controller/"
     type:     annotation
