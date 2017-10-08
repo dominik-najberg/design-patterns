@@ -1,3 +1,8 @@
+decorator:
+    resource: "@DecoratorBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 duck:
     resource: "@DuckBundle/Controller/"
     type:     annotation
