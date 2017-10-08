@@ -1,3 +1,8 @@
+factory:
+    resource: "@FactoryBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 decorator:
     resource: "@DecoratorBundle/Controller/"
     type:     annotation
