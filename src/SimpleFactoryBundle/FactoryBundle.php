@@ -1,6 +1,6 @@
 <?php
 
-namespace FactoryBundle;
+namespace SimpleFactoryBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
