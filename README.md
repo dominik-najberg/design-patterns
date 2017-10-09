@@ -6,4 +6,4 @@ This is entirely based on **Head First Design Patterns**. I am porting this from
 * DuckBundle - Strategy Pattern - Chapter 1
 * ObserverPatternBundle - Weather Station - Chapter 2
 * DecoratorBundle - Coffee Making - Chapter 3
-* FactoryBundle - Pizza Making - Chapter 4
+* SimpleFactoryBundle - Pizza Making - Chapter 4
