@@ -3,15 +3,44 @@
 namespace FactoryBundle\Pizzas;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use FactoryBundle\Ingredients\Clams;
+use FactoryBundle\Ingredients\Dough;
+use FactoryBundle\Ingredients\Pepperoni;
+use FactoryBundle\Ingredients\Sauce;
+use FactoryBundle\Ingredients\Veggie;
 
 abstract class Pizza
 {
     protected $name;
 
+    /**
+     * @var Dough
+     */
     protected $dough;
 
+    /**
+     * @var Sauce
+     */
     protected $souce;
 
+    /**
+     * @var Veggie[]
+     */
+    protected $veggies;
+
+    /**
+     * @var Pepperoni
+     */
+    protected $pepperoni;
+
+    /**
+     * @var Clams
+     */
+    protected $clams;
+
+    /**
+     * @var ArrayCollection
+     */
     protected $toppings;
 
     /**
@@ -53,10 +82,25 @@ abstract class Pizza
     }
 
     /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
      * @return string
      */
     public function getName()
     {
         return $this->name;
     }
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+    }
+
+
 }
