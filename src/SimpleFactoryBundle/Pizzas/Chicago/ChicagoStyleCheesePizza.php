@@ -13,9 +13,25 @@ use SimpleFactoryBundle\Pizzas\Pizza;
 
 class ChicagoStyleCheesePizza extends Pizza
 {
-    public function bake()
+
+
+    /**
+     * ChicagoStyleCheesePizza constructor.
+     */
+    public function __construct()
     {
-        return "This is baked with little Chicago at heart.";
+        parent::__construct();
+
+        $this->name  = "Chicago Style Deep Dish Cheese Pizza";
+        $this->dough = "Extra Thick Crust Dough";
+        $this->souce = "Plum Tomato Sauce";
+
+        $this->toppings->add("Shredded Mozarella Cheese");
+    }
+
+    public function cut()
+    {
+        return "Cutting the pizza into square slices.";
     }
 
 }

@@ -13,9 +13,17 @@ use SimpleFactoryBundle\Pizzas\Pizza;
 
 class NYStyleCheesePizza extends Pizza
 {
-    public function bake()
+    /**
+     * NYStyleCheesePizza constructor.
+     */
+    public function __construct()
     {
-        return "This cheese smells like New York!";
-    }
+        parent::__construct();
 
+        $this->name  = "NY Style Sauce and Cheese Pizza";
+        $this->dough = "Thin Crust Dough";
+        $this->souce = "Marinara Sauce";
+
+        $this->toppings->add("Grated Reggiano Cheese");
+    }
 }
