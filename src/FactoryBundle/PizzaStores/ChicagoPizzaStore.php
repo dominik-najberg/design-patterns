@@ -1,13 +1,13 @@
 <?php
 
-namespace SimpleFactoryBundle\PizzaStores;
+namespace FactoryBundle\PizzaStores;
 
 
-use SimpleFactoryBundle\Pizzas\Chicago\ChicagoStyleCheesePizza;
-use SimpleFactoryBundle\Pizzas\Chicago\ChicagoStyleClamPizza;
-use SimpleFactoryBundle\Pizzas\Chicago\ChicagoStylePepperoniPizza;
-use SimpleFactoryBundle\Pizzas\Chicago\ChicagoStyleVeggiePizza;
-use SimpleFactoryBundle\Pizzas\Pizza;
+use FactoryBundle\Pizzas\Chicago\ChicagoStyleCheesePizza;
+use FactoryBundle\Pizzas\Chicago\ChicagoStyleClamPizza;
+use FactoryBundle\Pizzas\Chicago\ChicagoStylePepperoniPizza;
+use FactoryBundle\Pizzas\Chicago\ChicagoStyleVeggiePizza;
+use FactoryBundle\Pizzas\Pizza;
 
 class ChicagoPizzaStore extends PizzaStore
 {

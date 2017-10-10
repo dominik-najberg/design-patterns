@@ -6,10 +6,10 @@
  * Time: 20:09
  */
 
-namespace SimpleFactoryBundle\Pizzas\NY;
+namespace FactoryBundle\Pizzas\NY;
 
 
-use SimpleFactoryBundle\Pizzas\Pizza;
+use FactoryBundle\Pizzas\Pizza;
 
 class NYStyleCheesePizza extends Pizza
 {

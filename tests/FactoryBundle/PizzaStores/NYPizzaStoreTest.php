@@ -1,10 +1,12 @@
 <?php
 
-namespace SimpleFactoryBundle\Tests\PizzaStores;
+namespace FactoryBundle\Tests\PizzaStores;
 
 use PHPUnit\Framework\TestCase;
-use SimpleFactoryBundle\PizzaStores\ChicagoPizzaStore;
-use SimpleFactoryBundle\PizzaStores\NYPizzaStore;
+use FactoryBundle\Pizzas\Chicago\ChicagoStyleCheesePizza;
+use FactoryBundle\Pizzas\NY\NYStyleCheesePizza;
+use FactoryBundle\PizzaStores\ChicagoPizzaStore;
+use FactoryBundle\PizzaStores\NYPizzaStore;
 
 class NYPizzaStoreTest extends TestCase
 {
@@ -15,7 +17,7 @@ class NYPizzaStoreTest extends TestCase
 
         $pizza = $pizzaStore->orderPizza('cheese');
 
-        $this->assertInstanceOf('SimpleFactoryBundle\Pizzas\NY\NYStyleCheesePizza', $pizza);
+        $this->assertInstanceOf(NYStyleCheesePizza::class, $pizza);
         $this->assertEquals('NY Style Sauce and Cheese Pizza', $pizza->getName());
     }
 
@@ -25,7 +27,7 @@ class NYPizzaStoreTest extends TestCase
 
         $pizza = $pizzaStore->orderPizza('cheese');
 
-        $this->assertInstanceOf('SimpleFactoryBundle\Pizzas\Chicago\ChicagoStyleCheesePizza', $pizza);
+        $this->assertInstanceOf(ChicagoStyleCheesePizza::class, $pizza);
         $this->assertEquals('Chicago Style Deep Dish Cheese Pizza', $pizza->getName());
     }
 

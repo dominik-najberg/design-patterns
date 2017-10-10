@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleFactoryBundle\Controller;
+namespace FactoryBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

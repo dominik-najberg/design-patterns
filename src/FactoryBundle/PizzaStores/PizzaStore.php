@@ -1,9 +1,9 @@
 <?php
 
-namespace SimpleFactoryBundle\PizzaStores;
+namespace FactoryBundle\PizzaStores;
 
 
-use SimpleFactoryBundle\Pizzas\Pizza;
+use FactoryBundle\Pizzas\Pizza;
 
 abstract class PizzaStore
 {
