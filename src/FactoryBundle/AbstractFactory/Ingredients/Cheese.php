@@ -6,7 +6,7 @@
  * Time: 21:33
  */
 
-namespace FactoryBundle\FactoryMethod\Ingredients;
+namespace FactoryBundle\AbstractFactory\Ingredients;
 
 
 abstract class Cheese

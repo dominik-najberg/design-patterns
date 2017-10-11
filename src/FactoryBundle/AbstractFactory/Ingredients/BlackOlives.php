@@ -1,13 +1,18 @@
 <?php
+/**
+ * User: potworny
+ * Date: 11.10.17
+ * Time: 21:25
+ */
 
 namespace FactoryBundle\AbstractFactory\Ingredients;
 
 
-class Mushroom extends Veggie
+class BlackOlives extends Veggie
 {
 
     /**
-     * Mushroom constructor.
+     * BlackOlives constructor.
      */
     public function __construct()
     {

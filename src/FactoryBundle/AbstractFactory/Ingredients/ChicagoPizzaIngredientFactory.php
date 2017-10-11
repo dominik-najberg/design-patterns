@@ -3,21 +3,21 @@
 namespace FactoryBundle\AbstractFactory\Ingredients;
 
 
-class NYPizzaIngredientFactory implements PizzaIngredientFactory
+class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory
 {
     public function createDough(): Dough
     {
-        return new ThinCrustDough();
+        return new ThickCrustDough();
     }
 
     public function createSauce(): Sauce
     {
-        return new MarinaraSauce();
+        return new PlumTomatoSauce();
     }
 
     public function createCheese(): Cheese
     {
-        return new ReggianoCheese();
+        return new MozarellaCheese();
     }
 
     /**
@@ -25,7 +25,7 @@ class NYPizzaIngredientFactory implements PizzaIngredientFactory
      */
     public function createVeggies()
     {
-        return [new Garlic(), new Onion(), new Mushroom(), new RedPepper()];
+        return [new BlackOlives(), new Spinach(), new EggPlant()];
     }
 
     public function createPepperoni(): Pepperoni
@@ -35,7 +35,7 @@ class NYPizzaIngredientFactory implements PizzaIngredientFactory
 
     public function createClam(): Clams
     {
-        return new FreshClams();
+        return new FrozenClams();
     }
 
 }

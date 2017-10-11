@@ -6,7 +6,7 @@
  * Time: 21:34
  */
 
-namespace FactoryBundle\FactoryMethod\Ingredients;
+namespace FactoryBundle\AbstractFactory\Ingredients;
 
 
 abstract class Clams

@@ -1,6 +1,6 @@
 <?php
 
-namespace FactoryBundle\FactoryMethod\Ingredients;
+namespace FactoryBundle\AbstractFactory\Ingredients;
 
 
 abstract class Dough
