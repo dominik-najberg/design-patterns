@@ -5,7 +5,7 @@
  * Time: 19:35
  */
 
-namespace FactoryBundle\SimpleFactory;
+namespace FactoryBundle\FactoryMethod\SimpleFactory;
 
 
 class SimplePizzaFactory

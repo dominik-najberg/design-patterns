@@ -2,11 +2,11 @@
 
 namespace FactoryBundle\Tests\PizzaStores;
 
+use FactoryBundle\FactoryMethod\Pizzas\Chicago\ChicagoStyleCheesePizza;
+use FactoryBundle\FactoryMethod\Pizzas\NY\NYStyleCheesePizza;
+use FactoryBundle\FactoryMethod\PizzaStores\ChicagoPizzaStore;
+use FactoryBundle\FactoryMethod\PizzaStores\NYPizzaStore;
 use PHPUnit\Framework\TestCase;
-use FactoryBundle\Pizzas\Chicago\ChicagoStyleCheesePizza;
-use FactoryBundle\Pizzas\NY\NYStyleCheesePizza;
-use FactoryBundle\PizzaStores\ChicagoPizzaStore;
-use FactoryBundle\PizzaStores\NYPizzaStore;
 
 class NYPizzaStoreTest extends TestCase
 {

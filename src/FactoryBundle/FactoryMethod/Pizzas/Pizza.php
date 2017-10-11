@@ -1,6 +1,6 @@
 <?php
 
-namespace FactoryBundle\FactoryMethod\SimpleFactory;
+namespace FactoryBundle\FactoryMethod\Pizzas;
 
 use Doctrine\Common\Collections\ArrayCollection;
 

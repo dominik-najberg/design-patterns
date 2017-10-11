@@ -5,7 +5,7 @@
  * Time: 19:39
  */
 
-namespace FactoryBundle\SimpleFactory;
+namespace FactoryBundle\FactoryMethod\SimpleFactory;
 
 
 class PepperoniPizza extends Pizza

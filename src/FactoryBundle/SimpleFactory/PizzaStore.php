@@ -5,7 +5,7 @@
  * Time: 19:14
  */
 
-namespace FactoryBundle\SimpleFactory;
+namespace FactoryBundle\FactoryMethod\SimpleFactory;
 
 
 abstract class PizzaStore
