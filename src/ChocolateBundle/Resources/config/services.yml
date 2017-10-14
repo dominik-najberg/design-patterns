@@ -1,0 +1,4 @@
+services:
+#    chocolate.example:
+#        class: ChocolateBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

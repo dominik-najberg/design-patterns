@@ -19,7 +19,8 @@ class AppKernel extends Kernel
             new ObserverPatternBundle\ObserverPatternBundle(),
             new DuckBundle\DuckBundle(),
             new DecoratorBundle\DecoratorBundle(),
-            new SimpleFactoryBundle\SimpleFactoryBundle(),
+            new FactoryBundle\SimpleFactoryBundle(),
+            new ChocolateBundle\ChocolateBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

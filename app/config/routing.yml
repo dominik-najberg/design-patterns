@@ -1,3 +1,8 @@
+chocolate:
+    resource: "@ChocolateBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 factory:
     resource: "@SimpleFactoryBundle/Controller/"
     type:     annotation
