@@ -10,7 +10,7 @@ namespace RemoteControlBundle\Commands;
 
 use RemoteControlBundle\Devices\GarageDoor;
 
-class GarageDoorOpen implements Command
+class GarageDoorOpenCommand implements Command
 {
     /**
      * @var GarageDoor
@@ -18,7 +18,7 @@ class GarageDoorOpen implements Command
     private $garageDoor;
 
     /**
-     * GarageDoorOpen constructor.
+     * GarageDoorOpenCommand constructor.
      *
      * @param GarageDoor $garageDoor
      */

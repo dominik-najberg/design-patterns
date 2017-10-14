@@ -8,7 +8,7 @@
 namespace RemoteControlBundle\Tests;
 
 use PHPUnit\Framework\TestCase;
-use RemoteControlBundle\Commands\GarageDoorOpen;
+use RemoteControlBundle\Commands\GarageDoorOpenCommand;
 use RemoteControlBundle\Commands\LightOnCommand;
 use RemoteControlBundle\Devices\GarageDoor;
 use RemoteControlBundle\Devices\Light;
@@ -29,7 +29,7 @@ class SimpleRemoteControlTest extends TestCase
 
     public function testLightSwitchOn()
     {
-        $light   = new Light();
+        $light   = new Light('Basement Light');
         $lightOn = new LightOnCommand($light);
 
         $this->remote->setCommand($lightOn);
@@ -41,7 +41,7 @@ class SimpleRemoteControlTest extends TestCase
     public function testGarageDoorUp()
     {
         $garageDoor     = new GarageDoor();
-        $garageDoorOpen = new GarageDoorOpen($garageDoor);
+        $garageDoorOpen = new GarageDoorOpenCommand($garageDoor);
 
         $this->remote->setCommand($garageDoorOpen);
         $this->remote->buttonWasPressed();

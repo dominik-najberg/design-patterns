@@ -8,11 +8,11 @@
 namespace RemoteControlBundle\Devices;
 
 /**
- * Class Light
+ * Class CeilingFan
  *
- * @package RemoteControlBundle
+ * @package RemoteControlBundle\Devices
  */
-class Light
+class CeilingFan
 {
     /**
      * @var bool
@@ -22,11 +22,10 @@ class Light
     /**
      * @var string
      */
-    private $name = "Black Light";
-
+    private $name = "Garage Fan";
 
     /**
-     * Light constructor
+     * CeilingFan constructor
      *
      * @param string $name
      */

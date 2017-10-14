@@ -19,7 +19,7 @@ class AdvancedRemoteCommand extends ContainerAwareCommand
     {
         $this
             ->setName('app:advanced_remote_command')
-            ->setDescription('I wanted to dump this properly.');
+            ->setDescription('I wanted to play with my remote.');
     }
 
     /**
@@ -28,7 +28,7 @@ class AdvancedRemoteCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $advRemote = new AdvancedRemoteControl();
-        $light = new Light();
+        $light = new Light('Wicked Light');
         $lightOn = new LightOnCommand($light);
         $lightOff = new LightOffCommand($light);
 
