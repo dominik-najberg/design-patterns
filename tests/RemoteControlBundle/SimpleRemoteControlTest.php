@@ -10,8 +10,8 @@ namespace RemoteControlBundle\Tests;
 use PHPUnit\Framework\TestCase;
 use RemoteControlBundle\Commands\GarageDoorOpen;
 use RemoteControlBundle\Commands\LightOnCommand;
-use RemoteControlBundle\GarageDoor;
-use RemoteControlBundle\Light;
+use RemoteControlBundle\Devices\GarageDoor;
+use RemoteControlBundle\Devices\Light;
 use RemoteControlBundle\SimpleRemoteControl;
 
 class SimpleRemoteControlTest extends TestCase

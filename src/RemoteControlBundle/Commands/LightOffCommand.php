@@ -10,7 +10,7 @@ namespace RemoteControlBundle\Commands;
 
 use RemoteControlBundle\Devices\Light;
 
-class LightOnCommand implements Command
+class LightOffCommand implements Command
 {
     /**
      * @var Light
@@ -18,7 +18,7 @@ class LightOnCommand implements Command
     private $light;
 
     /**
-     * LightOnCommand constructor
+     * LightOffCommand constructor
      *
      * @param Light $light
      */

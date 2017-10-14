@@ -5,7 +5,7 @@
  * Time: 15:25
  */
 
-namespace RemoteControlBundle;
+namespace RemoteControlBundle\Devices;
 
 
 class GarageDoor

@@ -5,7 +5,7 @@
  * Time: 14:57
  */
 
-namespace RemoteControlBundle;
+namespace RemoteControlBundle\Devices;
 
 /**
  * Class Light

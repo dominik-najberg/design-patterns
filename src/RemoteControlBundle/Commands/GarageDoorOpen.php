@@ -8,7 +8,7 @@
 namespace RemoteControlBundle\Commands;
 
 
-use RemoteControlBundle\GarageDoor;
+use RemoteControlBundle\Devices\GarageDoor;
 
 class GarageDoorOpen implements Command
 {
