@@ -29,6 +29,6 @@ class LightOffCommand implements Command
 
     public function execute(): void
     {
-        $this->light->on();
+        $this->light->off();
     }
 }
