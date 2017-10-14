@@ -31,4 +31,9 @@ class CeilingFanOnCommand implements Command
     {
         $this->fan->on();
     }
+
+    public function undo(): void
+    {
+        $this->fan->off();
+    }
 }

@@ -11,6 +11,12 @@ class NoCommand implements Command
 {
     public function execute(): void
     {
-        // empty command
+        // null object does nothing
     }
+
+    public function undo(): void
+    {
+        // null object does nothing
+    }
+
 }

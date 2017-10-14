@@ -30,7 +30,13 @@ class GarageDoorCloseCommand implements Command
     public function execute(): void
     {
         $this->garageDoor->lightOn(); // we've got a fancy garage door!
+        $this->garageDoor->down();
+    }
+
+    public function undo(): void
+    {
         $this->garageDoor->up();
+        $this->garageDoor->lightOff(); // we've got a fancy garage door!
     }
 
 }
