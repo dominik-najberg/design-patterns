@@ -30,7 +30,7 @@ class GarageDoor
      */
     public function __construct()
     {
-        $this->light = new Light();
+        $this->light = new Light('Garage Light');
     }
 
     public function up()
