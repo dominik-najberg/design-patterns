@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new DecoratorBundle\DecoratorBundle(),
             new FactoryBundle\SimpleFactoryBundle(),
             new ChocolateBundle\ChocolateBundle(),
+            new RemoteControlBundle\RemoteControlBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

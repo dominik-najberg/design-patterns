@@ -1,3 +1,8 @@
+remote_control:
+    resource: "@RemoteControlBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 chocolate:
     resource: "@ChocolateBundle/Controller/"
     type:     annotation
