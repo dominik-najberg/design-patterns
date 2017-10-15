@@ -14,34 +14,55 @@ namespace RemoteControlBundle\Devices;
  */
 class CeilingFan
 {
-    /**
-     * @var bool
-     */
-    private $on = false;
+    const HIGH   = 3;
+    const MEDIUM = 2;
+    const LOW    = 1;
+    const OFF    = 0;
 
     /**
      * @var string
      */
-    private $name = "Garage Fan";
+    private $location = "Garage Fan";
+
+    /**
+     * @var int
+     */
+    private $speed = self::OFF;
 
     /**
      * CeilingFan constructor
      *
-     * @param string $name
+     * @param string $location
      */
-    public function __construct(string $name)
+    public function __construct(string $location)
     {
-        $this->name = $name;
+        $this->location = $location;
+        $this->off();
     }
 
     public function on(): void
     {
-        $this->on = true;
+        $this->low();
     }
 
     public function off(): void
     {
-        $this->on = false;
+        $this->speed = self::OFF;
+    }
+
+    public function high()
+    {
+        $this->speed = self::HIGH;
+    }
+
+    public function medium()
+    {
+        $this->speed = self::MEDIUM;
+    }
+
+    public function low()
+    {
+        $this->speed = self::LOW;
     }
 
     /**
@@ -49,6 +70,16 @@ class CeilingFan
      */
     public function isOn(): bool
     {
-        return $this->on;
+        return $this->speed > 0;
     }
+
+    /**
+     * @return int
+     */
+    public function getSpeed(): int
+    {
+        return $this->speed;
+    }
+
+
 }

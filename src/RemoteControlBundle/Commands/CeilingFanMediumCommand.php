@@ -10,7 +10,7 @@ namespace RemoteControlBundle\Commands;
 
 use RemoteControlBundle\Devices\CeilingFan;
 
-class CeilingFanOnCommand implements Command
+class CeilingFanMediumCommand implements Command
 {
     /**
      * @var CeilingFan
@@ -35,7 +35,7 @@ class CeilingFanOnCommand implements Command
     public function execute(): void
     {
         $this->prevSpeed = $this->fan->getSpeed();
-        $this->fan->on();
+        $this->fan->medium();
     }
 
     public function undo(): void

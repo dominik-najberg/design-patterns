@@ -18,6 +18,11 @@ class CeilingFanOffCommand implements Command
     private $fan;
 
     /**
+     * @var int
+     */
+    private $prevSpeed;
+
+    /**
      * CeilingFanOffCommand constructor
      *
      * @param CeilingFan $ceilingFan
@@ -29,13 +34,20 @@ class CeilingFanOffCommand implements Command
 
     public function execute(): void
     {
+        $this->prevSpeed = $this->fan->getSpeed();
         $this->fan->off();
     }
 
     public function undo(): void
     {
-        $this->fan->on();
+        if ($this->prevSpeed == CeilingFan::HIGH) {
+            $this->fan->high();
+        } elseif ($this->prevSpeed == CeilingFan::MEDIUM) {
+            $this->fan->medium();
+        } elseif ($this->prevSpeed == CeilingFan::LOW) {
+            $this->fan->low();
+        } else {
+            $this->fan->off();
+        }
     }
-
-
 }

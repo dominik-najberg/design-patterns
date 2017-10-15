@@ -60,7 +60,7 @@ class RemoteControlWithUndo
     public function offButtonWasPushed(int $slot)
     {
         $this->offCommands->get($slot)->execute();
-        $this->undoCommand = $this->onCommands->get($slot);
+        $this->undoCommand = $this->offCommands->get($slot);
     }
 
     public function undoButtonWasPushed()
