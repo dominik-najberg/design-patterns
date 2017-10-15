@@ -34,8 +34,8 @@ class MacroCommand implements Command
 
     public function undo(): void
     {
-        foreach ($this->commands as $command) {
-            $command->undo();
+        for($i = count($this->commands); $i >= 0; $i--) {
+            $this->commands[$i]->undo();
         }
     }
 
