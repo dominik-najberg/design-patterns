@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new FactoryBundle\SimpleFactoryBundle(),
             new ChocolateBundle\ChocolateBundle(),
             new RemoteControlBundle\RemoteControlBundle(),
+            new AdapterFacadeBundle\AdapterFacadeBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

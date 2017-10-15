@@ -1,0 +1,4 @@
+services:
+#    adapter_facade.example:
+#        class: AdapterFacadeBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

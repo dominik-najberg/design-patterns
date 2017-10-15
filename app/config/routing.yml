@@ -1,3 +1,8 @@
+adapter_facade:
+    resource: "@AdapterFacadeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 remote_control:
     resource: "@RemoteControlBundle/Controller/"
     type:     annotation
