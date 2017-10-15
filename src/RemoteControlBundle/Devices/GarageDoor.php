@@ -11,7 +11,7 @@ namespace RemoteControlBundle\Devices;
 class GarageDoor
 {
     /**
-     * @var Light
+     * @var TV
      */
     private $light;
 

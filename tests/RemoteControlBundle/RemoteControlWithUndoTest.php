@@ -11,10 +11,20 @@ use PHPUnit\Framework\TestCase;
 use RemoteControlBundle\Commands\CeilingFanHighCommand;
 use RemoteControlBundle\Commands\CeilingFanMediumCommand;
 use RemoteControlBundle\Commands\CeilingFanOffCommand;
+use RemoteControlBundle\Commands\HotTubOffCommand;
+use RemoteControlBundle\Commands\HotTubOnCommand;
 use RemoteControlBundle\Commands\LightOffCommand;
 use RemoteControlBundle\Commands\LightOnCommand;
+use RemoteControlBundle\Commands\MacroCommand;
+use RemoteControlBundle\Commands\StereoOffWithCDCommand;
+use RemoteControlBundle\Commands\StereoOnWithCDCommand;
+use RemoteControlBundle\Commands\TvOffCommand;
+use RemoteControlBundle\Commands\TvOnCommand;
 use RemoteControlBundle\Devices\CeilingFan;
+use RemoteControlBundle\Devices\HotTub;
 use RemoteControlBundle\Devices\Light;
+use RemoteControlBundle\Devices\TV;
+use RemoteControlBundle\Devices\Stereo;
 use RemoteControlBundle\RemoteControlWithUndo;
 
 class RemoteControlWithUndoTest extends TestCase
@@ -70,6 +80,47 @@ class RemoteControlWithUndoTest extends TestCase
         $this->rcwu->undoButtonWasPushed();
         $this->assertEquals(CeilingFan::HIGH, $ceilingFan->getSpeed(), "Undo wouldn't work. Why not high?");
 
+
+    }
+
+    public function testAdvancedRemoteControlWithMacro()
+    {
+        $this->assertInstanceOf(RemoteControlWithUndo::class, $this->rcwu, 'Wrong Remote!');
+
+        $light  = new Light('Living Room');
+        $tv     = new TV('Living Room');
+        $stereo = new Stereo('Living Room');
+        $hottub = new HotTub(); // I want this is the Living Room, too!
+
+        $lightOff  = new LightOffCommand($light);
+        $lightOn   = new LightOnCommand($light);
+
+        $tvOn      = new TvOnCommand($tv);
+        $tvOff     = new TvOffCommand($tv);
+
+        $stereoOn  = new StereoOnWithCDCommand($stereo);
+        $stereoOff = new StereoOffWithCDCommand($stereo);
+
+        $hottubOn  = new HotTubOnCommand($hottub);
+        $hottubOff = new HotTubOffCommand($hottub);
+
+        $partyOn  = [$lightOn, $tvOn, $stereoOn, $hottubOn];
+        $partyOff = [$lightOff, $tvOff, $stereoOff, $hottubOff];
+
+        $partyOnMacro = new MacroCommand($partyOn);
+        $partyOffMacro = new MacroCommand($partyOff);
+
+        $this->rcwu->setCommand(0, $partyOnMacro, $partyOffMacro);
+
+        $this->rcwu->onButtonWasPushed(0);
+
+        $this->assertTrue($stereo->isOn());
+        $this->assertTrue($hottub->isOn());
+
+        $this->rcwu->undoButtonWasPushed();
+
+        $this->assertFalse($stereo->isOn());
+        $this->assertFalse($hottub->isOn());
 
     }
 }
