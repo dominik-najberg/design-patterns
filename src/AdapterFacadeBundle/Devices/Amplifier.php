@@ -56,4 +56,28 @@ class Amplifier
     {
         $this->mode = self::DVD;
     }
+
+    /**
+     * @return bool
+     */
+    public function isOn(): bool
+    {
+        return $this->on;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMode(): int
+    {
+        return $this->mode;
+    }
+
+    /**
+     * @return int
+     */
+    public function getVolume(): int
+    {
+        return $this->volume;
+    }
 }

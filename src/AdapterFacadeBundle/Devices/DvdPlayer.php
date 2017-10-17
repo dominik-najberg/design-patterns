@@ -66,4 +66,12 @@ class DvdPlayer
     {
         $this->title = $title;
     }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
 }
