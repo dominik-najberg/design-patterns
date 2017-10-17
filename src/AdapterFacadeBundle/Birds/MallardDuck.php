@@ -12,7 +12,7 @@ class MallardDuck implements DuckInterface
 {
     public function quack(): string
     {
-        return "Quack";
+        return "Quack.";
     }
 
     public function fly(): string
