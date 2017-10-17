@@ -10,5 +10,18 @@ namespace AdapterFacadeBundle\Devices;
 
 class Screen
 {
+    /**
+     * @var bool
+     */
+    private $down = false;
 
+    public function down()
+    {
+        $this->down = true;
+    }
+
+    public function up()
+    {
+        $this->down = false;
+    }
 }

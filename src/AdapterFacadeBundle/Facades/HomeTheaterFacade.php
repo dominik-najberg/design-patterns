@@ -60,7 +60,8 @@ class HomeTheaterFacade
     private $popper;
 
     /**
-     * HomeTheaterFacade constructor.
+     * HomeTheaterFacade constructor
+     *
      * @param Amplifier $amp
      * @param Tuner $tuner
      * @param DvdPlayer $dvd
@@ -84,4 +85,32 @@ class HomeTheaterFacade
     }
 
 
+    public function watchMovie(string $movie)
+    {
+        $this->popper->on();
+        $this->popper->pop();
+        $this->lights->dim(10);
+        $this->screen->down();
+        $this->projector->on();
+        $this->projector->wideScreenMode();
+        $this->amp->on();
+        $this->amp->setDvd();
+        $this->amp->setSurroundSound();
+        $this->amp->setVolume(5);
+        $this->dvd->on();
+        $this->dvd->insert($movie);
+        $this->dvd->play();
+    }
+
+    public function endMovie()
+    {
+        $this->popper->off();
+        $this->lights->on();
+        $this->screen->up();
+        $this->projector->off();
+        $this->amp->off();
+        $this->dvd->stop();
+        $this->dvd->eject();
+        $this->dvd->off();
+    }
 }
