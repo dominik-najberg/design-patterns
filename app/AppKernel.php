@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new ObserverPatternBundle\ObserverPatternBundle(),
             new DuckBundle\DuckBundle(),
             new DecoratorBundle\DecoratorBundle(),
-            new FactoryBundle\SimpleFactoryBundle(),
+            new FactoryBundle\FactoryBundle(),
             new ChocolateBundle\ChocolateBundle(),
             new RemoteControlBundle\RemoteControlBundle(),
             new AdapterFacadeBundle\AdapterFacadeBundle(),

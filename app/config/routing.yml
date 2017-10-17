@@ -1,37 +1,37 @@
 adapter_facade:
     resource: "@AdapterFacadeBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /adapt
 
 remote_control:
     resource: "@RemoteControlBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /remote
 
 chocolate:
     resource: "@ChocolateBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /chocolate
 
 factory:
-    resource: "@SimpleFactoryBundle/Controller/"
+    resource: "@FactoryBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /factory
 
 decorator:
     resource: "@DecoratorBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /decorator
 
 duck:
     resource: "@DuckBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /duck
 
 observer_pattern:
     resource: "@ObserverPatternBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /observer
 
 app:
     resource: '@AppBundle/Controller/'
