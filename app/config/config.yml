@@ -5,9 +5,10 @@ imports:
     - { resource: "@ObserverPatternBundle/Resources/config/services.yml" }
     - { resource: "@DuckBundle/Resources/config/services.yml" }
     - { resource: "@DecoratorBundle/Resources/config/services.yml" }
-    - { resource: "@SimpleFactoryBundle/Resources/config/services.yml" }
+    - { resource: "@FactoryBundle/Resources/config/services.yml" }
     - { resource: "@ChocolateBundle/Resources/config/services.yml" }
     - { resource: "@RemoteControlBundle/Resources/config/services.yml" }
+    - { resource: "@AdapterFacadeBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
