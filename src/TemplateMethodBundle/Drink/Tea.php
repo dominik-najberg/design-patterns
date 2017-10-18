@@ -8,46 +8,15 @@
 namespace TemplateMethodBundle\Drink;
 
 
-class Tea
+class Tea extends CaffeineBeverage
 {
-    /**
-     * @var array
-     */
-    private $debug = [];
-
-    public function prepareRecipe(): void
-    {
-        $this->debug[] = $this->boilWater();
-        $this->debug[] = $this->steepTeaBag();
-        $this->debug[] = $this->addLemon();
-        $this->debug[] = $this->pourInCup();
-    }
-
-    public function boilWater(): string
-    {
-        return "Boiling water.";
-    }
-
-    public function steepTeaBag(): string
+    public function brew(): string
     {
         return "Steeping the tea.";
     }
 
-    public function addLemon(): string
+    public function addCondiments(): string
     {
         return "Adding lemon.";
-    }
-
-    public function pourInCup(): string
-    {
-        return "Pouring into cup.";
-    }
-
-    /**
-     * @return array
-     */
-    public function getDebug(): array
-    {
-        return $this->debug;
     }
 }
