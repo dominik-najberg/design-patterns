@@ -7,6 +7,7 @@
 
 namespace TemplateMethodBundle\Drink;
 
+use Doctrine\Common\Comparable;
 use PHPUnit\Framework\TestCase;
 
 class CoffeeTest extends TestCase
