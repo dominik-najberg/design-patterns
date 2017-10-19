@@ -18,6 +18,9 @@ abstract class CaffeineBeverage
         $this->debug[] = $this->brew();
         $this->debug[] = $this->pourInCup();
         $this->debug[] = $this->addCondiments();
+
+        /* Bad, bad restaurant */
+        $this->debug[] = $this->playPrank();
     }
 
     public function boilWater(): string
@@ -33,6 +36,16 @@ abstract class CaffeineBeverage
     abstract function brew(): string;
 
     abstract function addCondiments(): string;
+
+    /**
+     * Optional hook
+     *
+     * @return null|string
+     */
+    protected function playPrank(): ?string
+    {
+        return null;
+    }
 
     /**
      * @return array

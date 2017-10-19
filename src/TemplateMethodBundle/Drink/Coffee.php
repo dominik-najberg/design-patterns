@@ -18,4 +18,11 @@ class Coffee extends CaffeineBeverage
     {
         return "Adding Sugar and Milk";
     }
+
+    protected function playPrank(): ?string
+    {
+        return "Put a wet finger inside the cup";
+    }
+
+
 }

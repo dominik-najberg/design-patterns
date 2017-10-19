@@ -15,7 +15,9 @@ class CoffeeTest extends TestCase
     public function testCoffee()
     {
         $coffee = new Coffee();
+        $coffee->prepareRecipe();
 
-        $this->assertArrayHasKey('Boiling water.', $coffee->getDebug());
+        $this->assertContains('Boiling water.', $coffee->getDebug(), 'The water is cold!');
+        $this->assertCount(5, $coffee->getDebug(), 'Too few steps when making coffee');
     }
 }
