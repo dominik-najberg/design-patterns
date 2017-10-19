@@ -39,11 +39,9 @@ abstract class Pigeon implements Comparable
 
         if ($this->getWeight() == $other->getWeight()) {
             return 0;
-        } elseif ($this->getWeight() > $other->getWeight()) {
-            return 1;
         }
 
-        return -1;
+        return $this->getWeight() > $other->getWeight() ? 1 : -1;
     }
 
     /**
