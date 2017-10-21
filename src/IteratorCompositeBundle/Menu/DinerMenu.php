@@ -23,6 +23,18 @@ class DinerMenu
      */
     private $menuItems = [];
 
+    /**
+     * DinerMenu constructor.
+     */
+    public function __construct()
+    {
+        $this->addItem("Vegetarian BLT", "(Fakin') Bacon with lettuce and tomato on whole wheat", true, 2.99);
+        $this->addItem("BLT", "Bacon with lettuce and tomato on whole wheat", false, 2.99);
+        $this->addItem("Soup of the day", "Soup of the day, with a side of potato salad", false, 3.29);
+        $this->addItem("Hot Dog", "A hot dog, with saurkraut, relish, onions, topped with cheese", false, 3.05);
+    }
+
+
     public function addItem(string $name, string $description, bool $vegetarian, float $price): ?string
     {
         $menuItem = new MenuItem($name, $description, $vegetarian, $price);
@@ -36,12 +48,9 @@ class DinerMenu
         return null;
     }
 
-    /**
-     * @return array
-     */
-    public function getMenuItems(): array
+    public function getDinerMenuIterator(): DinerMenuIterator
     {
-        return $this->menuItems;
+        return new DinerMenuIterator($this->menuItems);
     }
 
     // other menu methods that depend heavily on the array

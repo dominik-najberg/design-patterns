@@ -46,12 +46,9 @@ class PancakeHouseMenu
         $this->menuItems->add($menuItem);
     }
 
-    /**
-     * @return ArrayCollection
-     */
-    public function getMenuItems(): ArrayCollection
+    public function getPancakeHouseMenuIterator(): PancakeHouseMenuIterator
     {
-        return $this->menuItems;
+        return new PancakeHouseMenuIterator($this->menuItems);
     }
 
     // other methods that heavily depend on the ArrayCollection

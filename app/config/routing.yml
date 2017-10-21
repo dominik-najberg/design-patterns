@@ -1,7 +1,7 @@
 iterator_composite:
     resource: "@IteratorCompositeBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /iterator
 
 template_method:
     resource: "@TemplateMethodBundle/Controller/"
