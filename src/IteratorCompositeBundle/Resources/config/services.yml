@@ -1,0 +1,4 @@
+services:
+#    iterator_composite.example:
+#        class: IteratorCompositeBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

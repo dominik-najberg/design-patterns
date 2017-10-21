@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new RemoteControlBundle\RemoteControlBundle(),
             new AdapterFacadeBundle\AdapterFacadeBundle(),
             new TemplateMethodBundle\TemplateMethodBundle(),
+            new IteratorCompositeBundle\IteratorCompositeBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
