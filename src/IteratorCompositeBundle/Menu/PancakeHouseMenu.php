@@ -17,12 +17,12 @@ use Doctrine\Common\Collections\ArrayCollection;
  *
  * @package IteratorCompositeBundle\Menu
  */
-class PancakeHouseMenu
+class PancakeHouseMenu implements Menu
 {
     /**
      * Let's pretend an ArrayCollection is so very different from an array
      *
-     * @var ArrayCollection
+     * @var ArrayCollection|MenuItem[]
      */
     private $menuItems;
 
@@ -46,7 +46,7 @@ class PancakeHouseMenu
         $this->menuItems->add($menuItem);
     }
 
-    public function getPancakeHouseMenuIterator(): PancakeHouseMenuIterator
+    public function createIterator(): \Iterator
     {
         return new PancakeHouseMenuIterator($this->menuItems);
     }

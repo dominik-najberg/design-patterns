@@ -14,7 +14,7 @@ namespace IteratorCompositeBundle\Menu;
  *
  * @package IteratorCompositeBundle\Menu
  */
-class DinerMenu
+class DinerMenu implements Menu
 {
     const MAX_ITEMS = 6;
 
@@ -48,7 +48,7 @@ class DinerMenu
         return null;
     }
 
-    public function getDinerMenuIterator(): DinerMenuIterator
+    public function createIterator(): \Iterator
     {
         return new DinerMenuIterator($this->menuItems);
     }

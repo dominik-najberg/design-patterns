@@ -8,30 +8,28 @@
 namespace IteratorCompositeBundle\Staff;
 
 
-use IteratorCompositeBundle\Menu\DinerMenu;
+use IteratorCompositeBundle\Menu\Menu;
 use IteratorCompositeBundle\Menu\MenuItem;
-use IteratorCompositeBundle\Menu\PancakeHouseMenu;
-use IteratorCompositeBundle\Menu\PancakeHouseMenuIterator;
 
 class Waitress
 {
     /**
-     * @var PancakeHouseMenu
+     * @var Menu
      */
     private $pancakeHouseMenu;
 
     /**
-     * @var DinerMenu
+     * @var Menu
      */
     private $dinerMenu;
 
     /**
      * Waitress constructor
      *
-     * @param PancakeHouseMenu $pancakeHouseMenu
-     * @param DinerMenu $dinerMenu
+     * @param Menu $pancakeHouseMenu
+     * @param Menu $dinerMenu
      */
-    public function __construct(PancakeHouseMenu $pancakeHouseMenu, DinerMenu $dinerMenu)
+    public function __construct(Menu $pancakeHouseMenu, Menu $dinerMenu)
     {
         $this->pancakeHouseMenu = $pancakeHouseMenu;
         $this->dinerMenu = $dinerMenu;
@@ -40,9 +38,9 @@ class Waitress
     public function printMenu()
     {
         $output  = ("Breakfast Menu\n-------------\n");
-        $output .= $this->parseMenu($this->pancakeHouseMenu->getPancakeHouseMenuIterator());
+        $output .= $this->parseMenu($this->pancakeHouseMenu->createIterator());
         $output .= ("\n\nLunch Menu\n-------------\n");
-        $output .= $this->parseMenu($this->dinerMenu->getDinerMenuIterator());
+        $output .= $this->parseMenu($this->dinerMenu->createIterator());
 
         return $output;
     }
